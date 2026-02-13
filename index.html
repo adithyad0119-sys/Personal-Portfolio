@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="logo" href="#home">My<span>Portfolio</span></a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <nav id="navMenu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container site-main">
+    <!-- HOME (NO BOX) -->
+    <section id="home" class="section-pad home-hero">
+      <h1 class="home-title">My Portfolio</h1>
+
+      <p class="home-desc">
+        Welcome to my personal portfolio website. This website is used to show my profile,
+        projects, skills, and contact details in a clean and simple way.
+      </p>
+
+      <p class="home-desc">
+        A portfolio helps you present your work online for jobs, internships, and freelance
+        opportunities. Scroll down or use the menu above to explore.
+      </p>
+
+      <div class="home-actions">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn btn-ghost" href="#contact">Contact Me</a>
+      </div>
+
+      <div class="home-highlights">
+        <div class="highlight">
+          <h3>Simple</h3>
+          <p>Easy to read and easy to edit.</p>
+        </div>
+        <div class="highlight">
+          <h3>Responsive</h3>
+          <p>Works on mobile, tablet, and desktop.</p>
+        </div>
+        <div class="highlight">
+          <h3>Fast</h3>
+          <p>Lightweight HTML, CSS, and JavaScript.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section-pad">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        Write a short introduction about yourself here. Mention your education, interests,
+        and what you are learning in web development.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Who I Am</h3>
+          <p>I am a beginner web developer building simple and responsive websites.</p>
+        </div>
+
+        <div class="card">
+          <h3>My Goal</h3>
+          <p>To improve my skills and create real projects for my portfolio.</p>
+        </div>
+      </div>
+
+      <div class="card mt">
+        <h3>More</h3>
+        <p>
+          Add more information here (hobbies, achievements, certificates, etc.) so this page is longer
+          and scrolling becomes clear.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section-pad">
+      <h2 class="section-title">Projects</h2>
+      <p>Some sample projects. Use filter buttons to show different types.</p>
+
+      <div class="filters" role="group" aria-label="Project filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="web">Web</button>
+        <button class="chip" data-filter="js">JavaScript</button>
+      </div>
+
+      <div class="grid" id="projectsGrid">
+        <article class="card project" data-type="web">
+          <h3>Landing Page</h3>
+          <p>A simple responsive landing page design.</p>
+          <div class="tagrow">
+            <span class="tag">HTML</span><span class="tag">CSS</span>
+          </div>
+        </article>
+
+        <article class="card project" data-type="js">
+          <h3>To-Do App</h3>
+          <p>Add and remove tasks using JavaScript DOM.</p>
+          <div class="tagrow">
+            <span class="tag">JavaScript</span><span class="tag">DOM</span>
+          </div>
+        </article>
+
+        <article class="card project" data-type="web">
+          <h3>Simple Portfolio</h3>
+          <p>A basic personal portfolio layout.</p>
+          <div class="tagrow">
+            <span class="tag">Responsive</span>
+          </div>
+        </article>
+
+        <article class="card project" data-type="js">
+          <h3>Color Changer</h3>
+          <p>Change background color by button click.</p>
+          <div class="tagrow">
+            <span class="tag">Events</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section-pad">
+      <h2 class="section-title">Skills</h2>
+      <p>Example skill levels. Change numbers as you want.</p>
+
+      <div class="card">
+        <div class="skill">
+          <div class="skill-top"><span>HTML</span><span>80%</span></div>
+          <div class="bar"><span style="width:80%"></span></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-top"><span>CSS</span><span>70%</span></div>
+          <div class="bar"><span style="width:70%"></span></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-top"><span>JavaScript</span><span>60%</span></div>
+          <div class="bar"><span style="width:60%"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-pad">
+      <h2 class="section-title">Contact</h2>
+      <p>This is a demo form (no backend). It shows a message using JavaScript.</p>
+
+      <form class="card" id="contactForm">
+        <label>
+          Name
+          <input id="name" type="text" placeholder="Your name" required />
+        </label>
+
+        <label>
+          Email
+          <input id="email" type="email" placeholder="you@example.com" required />
+        </label>
+
+        <label>
+          Message
+          <textarea id="message" rows="4" placeholder="Write your message..." required></textarea>
+        </label>
+
+        <button class="btn" type="submit">Send</button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+
+      <div class="card mt">
+        <h3>Info</h3>
+        <p class="small"><b>Email:</b> you@example.com</p>
+        <p class="small"><b>GitHub:</b> github.com/yourname</p>
+        <p class="small"><b>LinkedIn:</b> linkedin.com/in/yourname</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> My Portfolio</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
